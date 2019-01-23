@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_coba_module_coba_module,coba_module.coba_module,model_coba_module_coba_module,,1,0,0,0
