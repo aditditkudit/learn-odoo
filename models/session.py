@@ -12,6 +12,9 @@ class Session(models.Model):
     duration = fields.Integer(string='Duration', required=False)
     seats = fields.Integer(string='Seats', required=False)
     active = fields.Boolean(string='Active')
+
+    attendee_ids = fields.One2many(comodel_name='academic.attendee', inverse_name='session_id', string='Attendees', required=False)
+    
     
     
     

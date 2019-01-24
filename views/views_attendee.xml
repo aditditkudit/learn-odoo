@@ -1,0 +1,22 @@
+<odoo>
+<odoo>
+    <data>
+        <!-- View Attendee tree view -->
+        <record id="model_name_view_tree" model="ir.ui.view">
+            <field name="name">view_academic_attendee_tree</field>
+            <field name="model">academic.attendee</field>
+            <field name="type">tree</field>
+            <field name="priority">8</field>
+            <field name="arch" type="xml">
+                <tree string="Attendee">
+                    <!-- Add your fields here -->
+                    <field name="name"/>
+                    <field name="session_id"/>
+                    <field name="partner_id"/>
+                </tree>
+            </field>
+        </record>
+        
+    </data>
+</odoo>
+</odoo>

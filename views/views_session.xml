@@ -3,13 +3,13 @@
     <data>
         <!-- Add you code here -->
         <!--Session tree view -->
-        <record id="model_name_view_tree" model="ir.ui.view">
+        <record id="view_academic_session_tree" model="ir.ui.view">
             <field name="name">academic.session.tree</field>
             <field name="model">academic.session</field>
             <field name="type">tree</field>
             <field name="priority" eval="8"/>
             <field name="arch" type="xml">
-                <tree>
+                <tree string="Session">
                     <!-- Add your fields here -->
                    <field name="name"/> 
                    <field name="instructor_id"/>
@@ -46,6 +46,17 @@
                                 <field name="active"/>
                             </group>
                         </group>
+
+                        <notebook>
+                            <page string="Attendees">
+                                <field name="attendee_ids">
+                                    <tree string="Attendees">
+                                    <field name="name"/>
+                                    <field name="partner_id"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
                     </sheet>
                 </form>
             </field>
