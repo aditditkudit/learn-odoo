@@ -16,6 +16,7 @@
                    <field name="duration"/>
                    <field name="seats"/>
                    <field name="active"/>
+                   <field name="taken_seats" widget="progressbar"/>
                 </tree>
             </field>
         </record>
@@ -46,6 +47,7 @@
                                 <field name="duration"/>
                                 <field name="seats"/>
                                 <field name="active"/>
+                                <field name="taken_seats" widget="progressbar"/>
                             </group>
                         </group>
 
