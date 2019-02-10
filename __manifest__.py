@@ -31,6 +31,7 @@
         'views/views_attendee.xml',
         'views/views_partner.xml',
         'views/templates.xml',
+        'views/workflow.xml',
         
         
     ],

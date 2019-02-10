@@ -14,5 +14,9 @@ class Attendee(models.Model):
             'You cannot insert the same attendee multiple times!'),
     ]
 
+    course_id = fields.Many2one(comodel_name='academic.course', string='Course', required=False,
+         related="session_id.course_id", store=True,)
+    
+    
     
     

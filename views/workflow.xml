@@ -1,0 +1,286 @@
+<?xml version="1.0" ?>
+<odoo>
+	<data noupdate="1">
+		<record id="workflow_session0" model="workflow">
+			<field name="create_uid" ref="base.user_root"/>
+			<field name="create_date">2019-02-10 18:35:20</field>
+			<field name="name">Session</field>
+			<field name="write_uid" ref="base.user_root"/>
+			<field name="osv">academic.session</field>
+			<field name="write_date">2019-02-10 18:35:20</field>
+			<field eval="1" name="on_create"/>
+		</record>
+		<record id="workflow_activity_confirmed0" model="workflow.activity">
+			<field name="create_uid" ref="base.user_root"/>
+			<field name="kind">function</field>
+			<field name="create_date">2019-02-10 18:36:13</field>
+			<field name="name">Confirmed</field>
+			<field name="join_mode">XOR</field>
+			<field model="workflow" name="wkf_id" search="[('name', '=', u'Session')]"/>
+			<field eval="0" name="flow_stop"/>
+			<field name="write_uid" ref="base.user_root"/>
+			<field name="split_mode">XOR</field>
+			<field name="write_date">2019-02-10 18:55:13</field>
+			<field name="action">action_confirm()</field>
+			<field eval="0" name="flow_start"/>
+		</record>
+		<record id="workflow_transition_0" model="workflow.transition">
+			<field name="create_uid" ref="base.user_root"/>
+			<field name="create_date">2019-02-10 18:37:25</field>
+			<field eval="10" name="sequence"/>
+			<field name="signal">signal_done</field>
+			<field name="write_uid" ref="base.user_root"/>
+			<field model="workflow.activity" name="act_from" search="[('name', '=', u'Confirmed')]"/>
+			<field model="workflow.activity" name="act_to" search="[('name', '=', u'Done')]"/>
+			<field name="write_date">2019-02-10 18:37:25</field>
+			<field name="condition">True</field>
+		</record>
+		<record id="workflow_transition_1" model="workflow.transition">
+			<field name="create_uid" ref="base.user_root"/>
+			<field name="create_date">2019-02-10 18:37:07</field>
+			<field eval="10" name="sequence"/>
+			<field name="signal">signal_confirm</field>
+			<field name="write_uid" ref="base.user_root"/>
+			<field model="workflow.activity" name="act_from" search="[('name', '=', u'Draft')]"/>
+			<field model="workflow.activity" name="act_to" search="[('name', '=', u'Confirmed')]"/>
+			<field name="write_date">2019-02-10 18:37:07</field>
+			<field name="condition">True</field>
+		</record>
+		<record id="workflow_activity_done0" model="workflow.activity">
+			<field name="create_uid" ref="base.user_root"/>
+			<field name="kind">function</field>
+			<field name="create_date">2019-02-10 18:36:39</field>
+			<field name="name">Done</field>
+			<field name="join_mode">XOR</field>
+			<field model="workflow" name="wkf_id" search="[('name', '=', u'Session')]"/>
+			<field eval="0" name="flow_stop"/>
+			<field name="write_uid" ref="base.user_root"/>
+			<field name="split_mode">XOR</field>
+			<field name="write_date">2019-02-10 18:36:39</field>
+			<field name="action">action_done()</field>
+			<field eval="0" name="flow_start"/>
+		</record>
+		<record id="workflow_transition_2" model="workflow.transition">
+			<field name="create_uid" ref="base.user_root"/>
+			<field name="create_date">2019-02-10 18:37:41</field>
+			<field eval="10" name="sequence"/>
+			<field name="signal">signal_draft</field>
+			<field name="write_uid" ref="base.user_root"/>
+			<field model="workflow.activity" name="act_from" search="[('name', '=', u'Done')]"/>
+			<field model="workflow.activity" name="act_to" search="[('name', '=', u'Draft')]"/>
+			<field name="write_date">2019-02-10 18:37:41</field>
+			<field name="condition">True</field>
+		</record>
+		<record id="workflow_transition_3" model="workflow.transition">
+			<field name="create_uid" ref="base.user_root"/>
+			<field name="create_date">2019-02-10 18:37:25</field>
+			<field eval="10" name="sequence"/>
+			<field name="signal">signal_done</field>
+			<field name="write_uid" ref="base.user_root"/>
+			<field model="workflow.activity" name="act_from" search="[('name', '=', u'Confirmed')]"/>
+			<field model="workflow.activity" name="act_to" search="[('name', '=', u'Done')]"/>
+			<field name="write_date">2019-02-10 18:37:25</field>
+			<field name="condition">True</field>
+		</record>
+		<record id="workflow_activity_draft0" model="workflow.activity">
+			<field name="create_uid" ref="base.user_root"/>
+			<field name="kind">function</field>
+			<field name="create_date">2019-02-10 18:35:53</field>
+			<field name="name">Draft</field>
+			<field name="join_mode">XOR</field>
+			<field model="workflow" name="wkf_id" search="[('name', '=', u'Session')]"/>
+			<field eval="0" name="flow_stop"/>
+			<field name="write_uid" ref="base.user_root"/>
+			<field name="split_mode">XOR</field>
+			<field name="write_date">2019-02-10 18:35:53</field>
+			<field name="action">action_draft()</field>
+			<field eval="1" name="flow_start"/>
+		</record>
+		<record id="workflow_transition_4" model="workflow.transition">
+			<field name="create_uid" ref="base.user_root"/>
+			<field name="create_date">2019-02-10 18:37:07</field>
+			<field eval="10" name="sequence"/>
+			<field name="signal">signal_confirm</field>
+			<field name="write_uid" ref="base.user_root"/>
+			<field model="workflow.activity" name="act_from" search="[('name', '=', u'Draft')]"/>
+			<field model="workflow.activity" name="act_to" search="[('name', '=', u'Confirmed')]"/>
+			<field name="write_date">2019-02-10 18:37:07</field>
+			<field name="condition">True</field>
+		</record>
+		<record id="workflow_transition_5" model="workflow.transition">
+			<field name="create_uid" ref="base.user_root"/>
+			<field name="create_date">2019-02-10 18:37:41</field>
+			<field eval="10" name="sequence"/>
+			<field name="signal">signal_draft</field>
+			<field name="write_uid" ref="base.user_root"/>
+			<field model="workflow.activity" name="act_from" search="[('name', '=', u'Done')]"/>
+			<field model="workflow.activity" name="act_to" search="[('name', '=', u'Draft')]"/>
+			<field name="write_date">2019-02-10 18:37:41</field>
+			<field name="condition">True</field>
+		</record>
+	</data>
+	<data noupdate="1">
+		<record id="workflow_session1" model="workflow">
+			<field name="create_uid" ref="base.user_root"/>
+			<field name="create_date">2019-02-10 18:41:08</field>
+			<field name="name">Session</field>
+			<field name="write_uid" ref="base.user_root"/>
+			<field name="osv">academic.session</field>
+			<field name="write_date">2019-02-10 18:41:08</field>
+			<field eval="1" name="on_create"/>
+		</record>
+	</data>
+	<data noupdate="1">
+		<record id="workflow_activity_confirmed1" model="workflow.activity">
+			<field name="create_uid" ref="base.user_root"/>
+			<field name="kind">function</field>
+			<field name="create_date">2019-02-10 18:36:13</field>
+			<field name="name">Confirmed</field>
+			<field name="join_mode">XOR</field>
+			<field name="wkf_id" ref="workflow_session0"/>
+			<field eval="0" name="flow_stop"/>
+			<field name="write_uid" ref="base.user_root"/>
+			<field name="split_mode">XOR</field>
+			<field name="write_date">2019-02-10 18:55:13</field>
+			<field name="action">action_confirm()</field>
+			<field eval="0" name="flow_start"/>
+		</record>
+		<record id="workflow_transition_6" model="workflow.transition">
+			<field name="create_uid" ref="base.user_root"/>
+			<field name="create_date">2019-02-10 18:37:25</field>
+			<field eval="10" name="sequence"/>
+			<field name="signal">signal_done</field>
+			<field name="write_uid" ref="base.user_root"/>
+			<field model="workflow.activity" name="act_from" search="[('name', '=', u'Confirmed')]"/>
+			<field model="workflow.activity" name="act_to" search="[('name', '=', u'Done')]"/>
+			<field name="write_date">2019-02-10 18:37:25</field>
+			<field name="condition">True</field>
+		</record>
+		<record id="workflow_transition_7" model="workflow.transition">
+			<field name="create_uid" ref="base.user_root"/>
+			<field name="create_date">2019-02-10 18:37:07</field>
+			<field eval="10" name="sequence"/>
+			<field name="signal">signal_confirm</field>
+			<field name="write_uid" ref="base.user_root"/>
+			<field model="workflow.activity" name="act_from" search="[('name', '=', u'Draft')]"/>
+			<field model="workflow.activity" name="act_to" search="[('name', '=', u'Confirmed')]"/>
+			<field name="write_date">2019-02-10 18:37:07</field>
+			<field name="condition">True</field>
+		</record>
+	</data>
+	<data noupdate="1">
+		<record id="workflow_activity_done1" model="workflow.activity">
+			<field name="create_uid" ref="base.user_root"/>
+			<field name="kind">function</field>
+			<field name="create_date">2019-02-10 18:36:39</field>
+			<field name="name">Done</field>
+			<field name="join_mode">XOR</field>
+			<field name="wkf_id" ref="workflow_session0"/>
+			<field eval="0" name="flow_stop"/>
+			<field name="write_uid" ref="base.user_root"/>
+			<field name="split_mode">XOR</field>
+			<field name="write_date">2019-02-10 18:36:39</field>
+			<field name="action">action_done()</field>
+			<field eval="0" name="flow_start"/>
+		</record>
+		<record id="workflow_transition_8" model="workflow.transition">
+			<field name="create_uid" ref="base.user_root"/>
+			<field name="create_date">2019-02-10 18:37:41</field>
+			<field eval="10" name="sequence"/>
+			<field name="signal">signal_draft</field>
+			<field name="write_uid" ref="base.user_root"/>
+			<field model="workflow.activity" name="act_from" search="[('name', '=', u'Done')]"/>
+			<field model="workflow.activity" name="act_to" search="[('name', '=', u'Draft')]"/>
+			<field name="write_date">2019-02-10 18:37:41</field>
+			<field name="condition">True</field>
+		</record>
+		<record id="workflow_transition_9" model="workflow.transition">
+			<field name="create_uid" ref="base.user_root"/>
+			<field name="create_date">2019-02-10 18:37:25</field>
+			<field eval="10" name="sequence"/>
+			<field name="signal">signal_done</field>
+			<field name="write_uid" ref="base.user_root"/>
+			<field name="act_from" ref="workflow_activity_confirmed1"/>
+			<field model="workflow.activity" name="act_to" search="[('name', '=', u'Done')]"/>
+			<field name="write_date">2019-02-10 18:37:25</field>
+			<field name="condition">True</field>
+		</record>
+	</data>
+	<data noupdate="1">
+		<record id="workflow_activity_draft1" model="workflow.activity">
+			<field name="create_uid" ref="base.user_root"/>
+			<field name="kind">function</field>
+			<field name="create_date">2019-02-10 18:35:53</field>
+			<field name="name">Draft</field>
+			<field name="join_mode">XOR</field>
+			<field name="wkf_id" ref="workflow_session0"/>
+			<field eval="0" name="flow_stop"/>
+			<field name="write_uid" ref="base.user_root"/>
+			<field name="split_mode">XOR</field>
+			<field name="write_date">2019-02-10 18:35:53</field>
+			<field name="action">action_draft()</field>
+			<field eval="1" name="flow_start"/>
+		</record>
+		<record id="workflow_transition_10" model="workflow.transition">
+			<field name="create_uid" ref="base.user_root"/>
+			<field name="create_date">2019-02-10 18:37:07</field>
+			<field eval="10" name="sequence"/>
+			<field name="signal">signal_confirm</field>
+			<field name="write_uid" ref="base.user_root"/>
+			<field model="workflow.activity" name="act_from" search="[('name', '=', u'Draft')]"/>
+			<field name="act_to" ref="workflow_activity_confirmed1"/>
+			<field name="write_date">2019-02-10 18:37:07</field>
+			<field name="condition">True</field>
+		</record>
+		<record id="workflow_transition_11" model="workflow.transition">
+			<field name="create_uid" ref="base.user_root"/>
+			<field name="create_date">2019-02-10 18:37:41</field>
+			<field eval="10" name="sequence"/>
+			<field name="signal">signal_draft</field>
+			<field name="write_uid" ref="base.user_root"/>
+			<field name="act_from" ref="workflow_activity_done1"/>
+			<field model="workflow.activity" name="act_to" search="[('name', '=', u'Draft')]"/>
+			<field name="write_date">2019-02-10 18:37:41</field>
+			<field name="condition">True</field>
+		</record>
+	</data>
+	<data noupdate="1">
+		<record id="workflow_transition_12" model="workflow.transition">
+			<field name="create_uid" ref="base.user_root"/>
+			<field name="create_date">2019-02-10 18:37:07</field>
+			<field eval="10" name="sequence"/>
+			<field name="signal">signal_confirm</field>
+			<field name="write_uid" ref="base.user_root"/>
+			<field name="act_from" ref="workflow_activity_draft1"/>
+			<field name="act_to" ref="workflow_activity_confirmed1"/>
+			<field name="write_date">2019-02-10 18:37:07</field>
+			<field name="condition">True</field>
+		</record>
+	</data>
+	<data noupdate="1">
+		<record id="workflow_transition_13" model="workflow.transition">
+			<field name="create_uid" ref="base.user_root"/>
+			<field name="create_date">2019-02-10 18:37:25</field>
+			<field eval="10" name="sequence"/>
+			<field name="signal">signal_done</field>
+			<field name="write_uid" ref="base.user_root"/>
+			<field name="act_from" ref="workflow_activity_confirmed1"/>
+			<field name="act_to" ref="workflow_activity_done1"/>
+			<field name="write_date">2019-02-10 18:37:25</field>
+			<field name="condition">True</field>
+		</record>
+	</data>
+	<data noupdate="1">
+		<record id="workflow_transition_14" model="workflow.transition">
+			<field name="create_uid" ref="base.user_root"/>
+			<field name="create_date">2019-02-10 18:37:41</field>
+			<field eval="10" name="sequence"/>
+			<field name="signal">signal_draft</field>
+			<field name="write_uid" ref="base.user_root"/>
+			<field name="act_from" ref="workflow_activity_done1"/>
+			<field name="act_to" ref="workflow_activity_draft1"/>
+			<field name="write_date">2019-02-10 18:37:41</field>
+			<field name="condition">True</field>
+		</record>
+	</data>
+</odoo>

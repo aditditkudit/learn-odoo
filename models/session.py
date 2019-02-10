@@ -1,5 +1,7 @@
-from odoo import api, fields, models
+from odoo import api, fields, models, _
+import time
 
+SESSION_STATES =[('draft','Draft'),('confirmed','Confirmed'),('done','Done')]
 
 class Session(models.Model):
     _name = 'academic.session'
@@ -8,14 +10,18 @@ class Session(models.Model):
 
     course_id = fields.Many2one(comodel_name='academic.course', string='Course', required=True)
     instructor_id = fields.Many2one(comodel_name='res.partner', string='Instructor', required=True)
-    start_date = fields.Date(string='Start Date', required=False)
+    start_date = fields.Date(string='Start Date', required=False, default=lambda self:time.strftime("%Y-%m-%d"))
     duration = fields.Integer(string='Duration', required=False)
     seats = fields.Integer(string='Seats', required=False)
-    active = fields.Boolean(string='Active')
+    active = fields.Boolean(string='Active', default=True)
 
     attendee_ids = fields.One2many(comodel_name='academic.attendee', inverse_name='session_id', string='Attendees', required=False)
 
     taken_seats = fields.Float(string='Taken Seat', required=False, compute='_calc_taken_seats')
+
+    image_small = fields.Binary(string='Image Small')
+    state = fields.Selection(string='State', selection=SESSION_STATES, required=True, readonly=True,default=SESSION_STATES[0][0])
+    
     
     @api.depends('attendee_ids', 'seats')
     def _calc_taken_seats(self):
@@ -44,7 +50,24 @@ class Session(models.Model):
     
     _constraints = [(_cek_instruktur, 'Instructor cannot be Attendee',['instructor_id', 'attendee_ids'])]
     
-
+    @api.multi
+    def copy(self, default=None):
+        self.ensure_one()
+        default = dict(default or{},
+                        name=_('Copy of %s') % self.name)
+        return super(Session, self).copy(default=default)
+    
+    @api.multi
+    def action_draft(self):
+        self.state = SESSION_STATES[0][0]
+    
+    @api.multi
+    def action_confirm(self):
+        self.state = SESSION_STATES[1][0]
+    
+    @api.multi
+    def action_done(self):
+        self.state = SESSION_STATES[2][0]
     
     
     
