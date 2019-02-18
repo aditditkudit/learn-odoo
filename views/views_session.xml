@@ -35,9 +35,9 @@
                             <!-- <button string="Confirm" type="object" name="action_confirm" states="draft"/>
                             <button string="Mark as Done" type="object" name="action_done" states="confirmed"/>
                             <button string="Reset to Draft" type="object" name="action_draft" states="confirmed,done"/> -->
-                            <button string="Confirm" type="workflow" name="signal_confirm" states="draft"/>
-                            <button string="Mark as Done" type="workflow" name="signal_done" states="confirmed"/>
-                            <button string="Reset to Draft" type="workflow" name="signal_draft" states="confirmed,done"/>
+                            <button string="Confirm" type="workflow" name="signal_confirm" groups="academic.group_manager" states="draft"/>
+                            <button string="Mark as Done" type="workflow" name="signal_done" groups="academic.group_manager" states="confirmed"/>
+                            <button string="Reset to Draft" type="workflow" name="signal_draft" groups="academic.group_manager" states="confirmed,done"/>
                             <field name="state" widget="statusbar"/>
                     </header>
                     <sheet>

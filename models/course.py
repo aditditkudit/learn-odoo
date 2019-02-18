@@ -3,8 +3,6 @@ from odoo import api, fields, models
 
 class Course(models.Model):
     _name = 'academic.course'
-    _rec_name ='name'
-    _description = 'New Description'
 
     name = fields.Char(string='Name')
     description = fields.Text(string='Description', required=False, )

@@ -32,6 +32,9 @@
         'views/views_partner.xml',
         'views/templates.xml',
         'views/workflow.xml',
+        'security/group.xml',
+        'security/ir.model.access.csv',
+        'wizard/create_attendee_view.xml'
         
         
     ],
