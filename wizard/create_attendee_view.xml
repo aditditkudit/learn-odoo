@@ -18,7 +18,7 @@
 			<field name="arch" type="xml">
 				<form string="Add Attendee" version='7.0'>
 					<group>
-						<field name="session_id"/>
+						<field name="session_ids"/>
 						<field name="attendee_ids" mode="tree">
 							<tree string="Attendees" editable="bottom">
 								<field name="partner_id"/>
@@ -33,6 +33,13 @@
 			</field>
 		</record>
 
+		<act_window id="session_create_attendee_wizard"
+			name="Add Attendees" 
+			src_model="academic.session"
+			res_model="academic.create.attendee.wizard"
+			view_mode="form"
+			target="new"
+			key2="client_action_multi"/>
 
 
 	</data>
