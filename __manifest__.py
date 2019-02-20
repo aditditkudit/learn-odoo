@@ -34,8 +34,8 @@
         'views/workflow.xml',
         'security/group.xml',
         'security/ir.model.access.csv',
-        'wizard/create_attendee_view.xml'
-        
+        'wizard/create_attendee_view.xml',
+        'report/session_report.xml',
         
     ],
 
