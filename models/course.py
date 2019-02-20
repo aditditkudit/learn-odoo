@@ -1,5 +1,4 @@
-from odoo import api, fields, models
-
+from odoo import api, fields, models, _
 
 class Course(models.Model):
     _name = 'academic.course'

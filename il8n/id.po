@@ -1,0 +1,450 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* coba_module
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0-20180916\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-02-20 08:24+0000\n"
+"PO-Revision-Date: 2019-02-20 08:24+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: coba_module
+#: model:ir.ui.menu,name:coba_module.academic_0
+#: model:ir.ui.menu,name:coba_module.academic_1
+msgid "Academic"
+msgstr "Academic"
+
+#. module: coba_module
+#: model:res.groups,name:coba_module.group_manager
+msgid "Academic / Manager"
+msgstr "Academic / Manager"
+
+#. module: coba_module
+#: model:res.groups,name:coba_module.group_user
+msgid "Academic / User"
+msgstr "Academic / User"
+
+#. module: coba_module
+#: model:ir.model.fields,field_description:coba_module.field_academic_session_active
+msgid "Active"
+msgstr "Aktif"
+
+#. module: coba_module
+#: model:ir.ui.menu,name:coba_module.create_attendee_wizard_menu
+#: model:ir.ui.view,arch_db:coba_module.create_attendee_form_view
+msgid "Add Attendee"
+msgstr "Tambah Peserta"
+
+#. module: coba_module
+#: model:ir.actions.act_window,name:coba_module.session_create_attendee_wizard
+#: model:ir.ui.view,arch_db:coba_module.create_attendee_form_view
+msgid "Add Attendees"
+msgstr "Tambah Peserta"
+
+#. module: coba_module
+#: model:ir.actions.act_window,name:coba_module.create_attendee_wizard_action
+msgid "Add attendee"
+msgstr "Tambah Peserta"
+
+#. module: coba_module
+#: model:ir.ui.view,arch_db:coba_module.create_attendee_form_view
+msgid "Are you sure you want to add those Attendees"
+msgstr "Apakah Kamu yakin akan menambahkan semua peserta ini?"
+
+#. module: coba_module
+#: model:ir.ui.menu,name:coba_module.menu_academic_attendee
+#: model:ir.ui.view,arch_db:coba_module.model_name_view_tree
+msgid "Attendee"
+msgstr "Attendee"
+
+#. module: coba_module
+#: model:ir.model.fields,field_description:coba_module.field_academic_session_attendee_ids
+#: model:ir.ui.view,arch_db:coba_module.create_attendee_form_view
+#: model:ir.ui.view,arch_db:coba_module.view_academic_session_form
+msgid "Attendees"
+msgstr "Peserta"
+
+#. module: coba_module
+#: model:ir.model.fields,field_description:coba_module.field_academic_create_attendee_wizard_attendee_ids
+msgid "Attendees to Add"
+msgstr "Attendees to Add"
+
+#. module: coba_module
+#: model:ir.ui.view,arch_db:coba_module.create_attendee_form_view
+msgid "Cancel"
+msgstr "Batalkan"
+
+#. module: coba_module
+#: model:ir.actions.act_window,help:coba_module.action_instructor_list
+msgid "Click to Add an Instructor"
+msgstr "Click to Add an Instructor"
+
+#. module: coba_module
+#: model:ir.actions.act_window,help:coba_module.action_attendee_list
+msgid "Click to add a Attendee"
+msgstr "Click to add a Attendee"
+
+#. module: coba_module
+#: model:ir.actions.act_window,help:coba_module.action_course_list
+msgid "Click to add a Course"
+msgstr "Click to add a Course"
+
+#. module: coba_module
+#: model:ir.actions.act_window,help:coba_module.action_session_list
+msgid "Click to add a Session"
+msgstr "Click to add a Session"
+
+#. module: coba_module
+#: model:ir.ui.view,arch_db:coba_module.view_academic_session_form
+msgid "Confirm"
+msgstr "Konfirmasi"
+
+#. module: coba_module
+#: selection:academic.session,state:0
+msgid "Confirmed"
+msgstr "Confirmed"
+
+#. module: coba_module
+#: code:addons/coba_module/models/session.py:57
+#, python-format
+msgid "Copy of %s"
+msgstr "Copy of %s"
+
+#. module: coba_module
+#: model:ir.model.fields,field_description:coba_module.field_academic_attendee_course_id
+#: model:ir.model.fields,field_description:coba_module.field_academic_session_course_id
+#: model:ir.ui.menu,name:coba_module.menu_academic_course
+#: model:ir.ui.view,arch_db:coba_module.model_name_view_search
+msgid "Course"
+msgstr "Course"
+
+#. module: coba_module
+#: model:ir.ui.view,arch_db:coba_module.view_academic_course_form
+msgid "Course Form"
+msgstr "Course Form"
+
+#. module: coba_module
+#: model:ir.model.fields,field_description:coba_module.field_academic_attendee_create_uid
+#: model:ir.model.fields,field_description:coba_module.field_academic_attendee_wizard_create_uid
+#: model:ir.model.fields,field_description:coba_module.field_academic_course_create_uid
+#: model:ir.model.fields,field_description:coba_module.field_academic_create_attendee_wizard_create_uid
+#: model:ir.model.fields,field_description:coba_module.field_academic_session_create_uid
+msgid "Created by"
+msgstr "Dibuat oleh"
+
+#. module: coba_module
+#: model:ir.model.fields,field_description:coba_module.field_academic_attendee_create_date
+#: model:ir.model.fields,field_description:coba_module.field_academic_attendee_wizard_create_date
+#: model:ir.model.fields,field_description:coba_module.field_academic_course_create_date
+#: model:ir.model.fields,field_description:coba_module.field_academic_create_attendee_wizard_create_date
+#: model:ir.model.fields,field_description:coba_module.field_academic_session_create_date
+msgid "Created on"
+msgstr "Dibuat pada"
+
+#. module: coba_module
+#: model:ir.actions.act_window,name:coba_module.action_attendee_list
+msgid "Daftar Attendee"
+msgstr "Daftar Attendee"
+
+#. module: coba_module
+#: model:ir.actions.act_window,name:coba_module.action_course_list
+msgid "Daftar Course"
+msgstr "Daftar Course"
+
+#. module: coba_module
+#: model:ir.actions.act_window,name:coba_module.action_instructor_list
+msgid "Daftar Instructor"
+msgstr "Daftar Instructor"
+
+#. module: coba_module
+#: model:ir.actions.act_window,name:coba_module.action_session_list
+msgid "Daftar Session"
+msgstr "Daftar Session"
+
+#. module: coba_module
+#: model:ir.ui.view,arch_db:coba_module.session_search
+msgid "Date"
+msgstr "Tanggal"
+
+#. module: coba_module
+#: model:ir.model.fields,field_description:coba_module.field_academic_course_description
+#: model:ir.ui.view,arch_db:coba_module.view_academic_course_form
+msgid "Description"
+msgstr "Keterangan"
+
+#. module: coba_module
+#: model:ir.model.fields,field_description:coba_module.field_academic_attendee_display_name
+#: model:ir.model.fields,field_description:coba_module.field_academic_attendee_wizard_display_name
+#: model:ir.model.fields,field_description:coba_module.field_academic_course_display_name
+#: model:ir.model.fields,field_description:coba_module.field_academic_create_attendee_wizard_display_name
+#: model:ir.model.fields,field_description:coba_module.field_academic_session_display_name
+msgid "Display Name"
+msgstr "Nama Tampilan"
+
+#. module: coba_module
+#: selection:academic.session,state:0
+msgid "Done"
+msgstr "Done"
+
+#. module: coba_module
+#: selection:academic.session,state:0
+msgid "Draft"
+msgstr "Draft"
+
+#. module: coba_module
+#: model:ir.model.fields,field_description:coba_module.field_academic_session_duration
+msgid "Duration"
+msgstr "Durasi"
+
+#. module: coba_module
+#: sql_constraint:academic.course:0
+msgid "Field name dan Description tidak boleh sama"
+msgstr "Field name dan Description tidak boleh sama"
+
+#. module: coba_module
+#: model:ir.ui.view,arch_db:coba_module.session_search
+msgid "Group By.."
+msgstr "Group By.."
+
+#. module: coba_module
+#: model:ir.model.fields,field_description:coba_module.field_academic_attendee_id
+#: model:ir.model.fields,field_description:coba_module.field_academic_attendee_wizard_id
+#: model:ir.model.fields,field_description:coba_module.field_academic_course_id
+#: model:ir.model.fields,field_description:coba_module.field_academic_create_attendee_wizard_id
+#: model:ir.model.fields,field_description:coba_module.field_academic_session_id
+msgid "ID"
+msgstr "ID"
+
+#. module: coba_module
+#: model:ir.model.fields,field_description:coba_module.field_academic_session_image_small
+msgid "Image Small"
+msgstr "Image Small"
+
+#. module: coba_module
+#: model:ir.ui.view,arch_db:coba_module.view_res_partner_filter2
+msgid "Instrcutor Partners"
+msgstr "Instrcutor Partners"
+
+#. module: coba_module
+#: model:ir.model.fields,field_description:coba_module.field_academic_session_instructor_id
+#: model:ir.ui.menu,name:coba_module.menu_academic_instructor
+#: model:ir.ui.view,arch_db:coba_module.session_search
+msgid "Instructor"
+msgstr "Instructor"
+
+#. module: coba_module
+#: constraint:academic.session:0
+msgid "Instructor cannot be Attendee"
+msgstr "Instructor cannot be Attendee"
+
+#. module: coba_module
+#: model:ir.ui.view,arch_db:coba_module.view_res_partner_filter2
+msgid "Instructors"
+msgstr "Instructors"
+
+#. module: coba_module
+#: model:ir.model.fields,field_description:coba_module.field_res_partner_is_instructor
+#: model:ir.model.fields,field_description:coba_module.field_res_users_is_instructor
+msgid "Is Instructor"
+msgstr "Is Instructor"
+
+#. module: coba_module
+#: model:ir.actions.act_window,help:coba_module.action_attendee_list
+msgid "Klik Tombol Create untuk bikin Attendee Baru"
+msgstr "Klik Tombol Create untuk bikin Attendee Baru"
+
+#. module: coba_module
+#: model:ir.actions.act_window,help:coba_module.action_course_list
+msgid "Klik Tombol Create untuk bikin Course Baru"
+msgstr "Klik Tombol Create untuk bikin Course Baru"
+
+#. module: coba_module
+#: model:ir.actions.act_window,help:coba_module.action_session_list
+msgid "Klik Tombol Create untuk bikin Session Baru"
+msgstr "Klik Tombol Create untuk bikin Session Baru"
+
+#. module: coba_module
+#: model:ir.model.fields,field_description:coba_module.field_academic_attendee___last_update
+#: model:ir.model.fields,field_description:coba_module.field_academic_attendee_wizard___last_update
+#: model:ir.model.fields,field_description:coba_module.field_academic_course___last_update
+#: model:ir.model.fields,field_description:coba_module.field_academic_create_attendee_wizard___last_update
+#: model:ir.model.fields,field_description:coba_module.field_academic_session___last_update
+msgid "Last Modified on"
+msgstr "Terakhir diubah pada"
+
+#. module: coba_module
+#: model:ir.model.fields,field_description:coba_module.field_academic_attendee_wizard_write_uid
+#: model:ir.model.fields,field_description:coba_module.field_academic_attendee_write_uid
+#: model:ir.model.fields,field_description:coba_module.field_academic_course_write_uid
+#: model:ir.model.fields,field_description:coba_module.field_academic_create_attendee_wizard_write_uid
+#: model:ir.model.fields,field_description:coba_module.field_academic_session_write_uid
+msgid "Last Updated by"
+msgstr "Terakhir diperbarui oleh"
+
+#. module: coba_module
+#: model:ir.model.fields,field_description:coba_module.field_academic_attendee_wizard_write_date
+#: model:ir.model.fields,field_description:coba_module.field_academic_attendee_write_date
+#: model:ir.model.fields,field_description:coba_module.field_academic_course_write_date
+#: model:ir.model.fields,field_description:coba_module.field_academic_create_attendee_wizard_write_date
+#: model:ir.model.fields,field_description:coba_module.field_academic_session_write_date
+msgid "Last Updated on"
+msgstr "Terakhir Diperbaharui pada"
+
+#. module: coba_module
+#: model:ir.ui.view,arch_db:coba_module.view_academic_session_form
+msgid "Mark as Done"
+msgstr "Mark as Done"
+
+#. module: coba_module
+#: model:ir.actions.act_window,help:coba_module.action_instructor_list
+msgid "Nambah Instructor"
+msgstr "Nambah Instructor"
+
+#. module: coba_module
+#: model:ir.model.fields,field_description:coba_module.field_academic_attendee_name
+#: model:ir.model.fields,field_description:coba_module.field_academic_course_name
+#: model:ir.model.fields,field_description:coba_module.field_academic_session_name
+msgid "Name"
+msgstr "Nama"
+
+#. module: coba_module
+#: sql_constraint:academic.course:0
+msgid "Name harus unik"
+msgstr "Name harus unik"
+
+#. module: coba_module
+#: model:ir.ui.view,arch_db:coba_module.session_search
+msgid "Non Zero Duration"
+msgstr "Non Zero Duration"
+
+#. module: coba_module
+#: model:ir.model,name:coba_module.model_res_partner
+#: model:ir.model.fields,field_description:coba_module.field_academic_attendee_partner_id
+#: model:ir.model.fields,field_description:coba_module.field_academic_attendee_wizard_partner_id
+#: model:ir.ui.view,arch_db:coba_module.model_name_view_search
+msgid "Partner"
+msgstr "Rekanan"
+
+#. module: coba_module
+#: model:ir.ui.view,arch_db:coba_module.view_academic_session_form
+msgid "Reset to Draft"
+msgstr "Reset ke Draft"
+
+#. module: coba_module
+#: model:ir.model.fields,field_description:coba_module.field_academic_course_responsible_id
+msgid "Responsible"
+msgstr "bertanggung jawab"
+
+#. module: coba_module
+#: model:ir.ui.view,arch_db:coba_module.model_name_view_search
+#: model:ir.ui.view,arch_db:coba_module.session_search
+msgid "Search Description"
+msgstr "Search Description"
+
+#. module: coba_module
+#: model:ir.ui.view,arch_db:coba_module.view_res_partner_filter2
+msgid "Search Partner"
+msgstr "Pencarian Partner"
+
+#. module: coba_module
+#: model:ir.model.fields,field_description:coba_module.field_academic_session_seats
+msgid "Seats"
+msgstr "Seats"
+
+#. module: coba_module
+#: model:ir.ui.view,arch_db:coba_module.session_kanban
+msgid "Seats:"
+msgstr "Seats:"
+
+#. module: coba_module
+#: model:ir.model.fields,field_description:coba_module.field_academic_attendee_session_id
+#: model:ir.ui.menu,name:coba_module.menu_academic_session
+#: model:ir.ui.view,arch_db:coba_module.model_name_view_search
+#: model:ir.ui.view,arch_db:coba_module.session_cal
+#: model:ir.ui.view,arch_db:coba_module.session_gantt
+#: model:ir.ui.view,arch_db:coba_module.session_graph
+#: model:ir.ui.view,arch_db:coba_module.view_academic_session_form
+#: model:ir.ui.view,arch_db:coba_module.view_academic_session_tree
+msgid "Session"
+msgstr "Session"
+
+#. module: coba_module
+#: model:ir.ui.view,arch_db:coba_module.view_academic_session_form
+msgid "Session Name"
+msgstr "Session Name"
+
+#. module: coba_module
+#: model:ir.model.fields,field_description:coba_module.field_academic_course_session_ids
+#: model:ir.model.fields,field_description:coba_module.field_academic_create_attendee_wizard_session_ids
+#: model:ir.ui.view,arch_db:coba_module.view_academic_course_form
+msgid "Sessions"
+msgstr "Sessions"
+
+#. module: coba_module
+#: model:ir.model.fields,field_description:coba_module.field_academic_session_start_date
+msgid "Start Date"
+msgstr "Tanggal Mulai"
+
+#. module: coba_module
+#: model:ir.model.fields,field_description:coba_module.field_academic_session_state
+msgid "State"
+msgstr "Pernyataan"
+
+#. module: coba_module
+#: model:ir.model.fields,field_description:coba_module.field_academic_session_taken_seats
+msgid "Taken Seat"
+msgstr "Tempat Sudah Terpakai"
+
+#. module: coba_module
+#: model:ir.ui.view,arch_db:coba_module.session_kanban
+msgid "Taken Seats:"
+msgstr "Taken Seats:"
+
+#. module: coba_module
+#: model:ir.model.fields,field_description:coba_module.field_academic_attendee_wizard_wizard_id
+msgid "Wizard"
+msgstr "Wizard"
+
+#. module: coba_module
+#: sql_constraint:academic.attendee:0
+msgid "You cannot insert the same attendee multiple times!"
+msgstr "You cannot insert the same attendee multiple times!"
+
+#. module: coba_module
+#: model:ir.model,name:coba_module.model_academic_attendee
+msgid "academic.attendee"
+msgstr "academic.attendee"
+
+#. module: coba_module
+#: model:ir.model,name:coba_module.model_academic_attendee_wizard
+msgid "academic.attendee.wizard"
+msgstr "academic.attendee.wizard"
+
+#. module: coba_module
+#: model:ir.model,name:coba_module.model_academic_course
+msgid "academic.course"
+msgstr "academic.course"
+
+#. module: coba_module
+#: model:ir.model,name:coba_module.model_academic_create_attendee_wizard
+msgid "academic.create.attendee.wizard"
+msgstr "academic.create.attendee.wizard"
+
+#. module: coba_module
+#: model:ir.model,name:coba_module.model_academic_session
+msgid "academic.session"
+msgstr "academic.session"
+
+#. module: coba_module
+#: model:ir.ui.view,arch_db:coba_module.session_search
+#: model:ir.ui.view,arch_db:coba_module.view_academic_course_tree
+msgid "course"
+msgstr "course"
+
