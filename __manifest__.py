@@ -10,6 +10,13 @@
         Academic Information System Day 1
     """,
 
+    'depends': [
+        'base',
+        'account',
+        'sale',
+        'board',
+    ],
+
     'author': "Kudit",
     'website': "http://github.com",
 
@@ -36,6 +43,7 @@
         'security/ir.model.access.csv',
         'wizard/create_attendee_view.xml',
         'report/session_report.xml',
+        'dashboard.xml'
         
     ],
 
